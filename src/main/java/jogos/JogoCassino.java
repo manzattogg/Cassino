@@ -37,10 +37,11 @@ public abstract class JogoCassino implements Jogavel {
             throw new FichasInsuficientesException("Fichas insuficientes para realizar a aposta.");
         }
 
-        this.jogador.removerFichas(aposta.getValor());
-        
         this.jogador = jogador;
         this.aposta = aposta;
+        
+        this.jogador.removerFichas(aposta.getValor());
+
         this.rodadaEmAndamento = true;
 
         executarJogo();

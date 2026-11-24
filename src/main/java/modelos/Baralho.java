@@ -12,7 +12,7 @@ public class Baralho {
         this.cartas = new ArrayList<>();
     }
 
-    void iniciarBaralho() { // inicia o baralho inteiro sem os coringas
+    public void iniciarBaralho() { // inicia o baralho inteiro sem os coringas
         for (Naipe naipe : Naipe.values()) {
             for (ValorCarta valor : ValorCarta.values()) {
                 this.cartas.add(new Carta(naipe, valor));
@@ -20,7 +20,7 @@ public class Baralho {
         }
     }
 
-    void embaralhar() {
+    public void embaralhar() {
         Collections.shuffle(this.cartas);
     }
 
